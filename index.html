@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manager Library</title>
+  <style>
+    :root { --bg: #f7f5f0; --ink: #1f2933; --muted: #52606d; --accent: #2f5d50; --card: #ffffff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+    header { background: var(--accent); color: #fff; padding: 64px 20px; text-align: center; }
+    header h1 { margin: 0 0 12px; font-size: clamp(2rem, 6vw, 3rem); }
+    header p { margin: 0 auto; max-width: 640px; font-size: 1.1rem; opacity: 0.92; }
+    main { max-width: 960px; margin: 0 auto; padding: 40px 20px; }
+    h2 { color: var(--accent); margin-top: 40px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .card { background: var(--card); border-radius: 10px; padding: 18px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); }
+    .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    ul { padding-left: 20px; color: var(--muted); }
+    footer { text-align: center; padding: 28px 20px; color: var(--muted); font-size: 0.9rem; border-top: 1px solid #ddd; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Manager Library</h1>
+    <p>A system for a small library to manage its book catalog, its members and its loans, and to see which books are borrowed the most.</p>
+  </header>
+
+  <main>
+    <h2>What it covers</h2>
+    <div class="grid">
+      <div class="card"><h3>Book catalog</h3><p>Books with an optional cover, five fixed categories, search by title or author, and soft delete.</p></div>
+      <div class="card"><h3>Members</h3><p>People who borrow books. They are data, not system users, and they are never deleted.</p></div>
+      <div class="card"><h3>Loans</h3><p>One member per loan, up to 3 books, due 14 days after the loan, with the book data frozen at that moment.</p></div>
+      <div class="card"><h3>Returns</h3><p>Each book is returned on its own line, and the loan closes when every line is back.</p></div>
+      <div class="card"><h3>Overdue books</h3><p>A list of the books not returned in time, with the days of delay.</p></div>
+      <div class="card"><h3>Top borrowed report</h3><p>The most borrowed books in a date range, available only to the administrator.</p></div>
+    </div>
+
+    <h2>Who uses it</h2>
+    <ul>
+      <li><strong>Administrator:</strong> manages books and members, creates librarians and sees every report.</li>
+      <li><strong>Librarian:</strong> registers loans and returns, and checks the catalog, members and overdue books.</li>
+    </ul>
+
+    <h2>How it is built</h2>
+    <p>The project follows Spec-Driven Development: a Laravel backend with a hexagonal architecture, a React frontend and a PostgreSQL database, all derived from one written specification.</p>
+  </main>
+
+  <footer>
+    SDD technical test, ficha ADSO 3145556 &middot; Author: José Sebastián Suárez Cumaco
+    (<a href="https://github.com/JoseSebastianSuarezCumaco">JoseSebastianSuarezCumaco</a>)
+  </footer>
+</body>
+</html>
