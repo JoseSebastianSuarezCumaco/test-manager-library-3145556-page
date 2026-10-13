@@ -58,4 +58,4 @@ This repository is my fork of `code-sena/test-manager-library-3145556-page`, dev
 
 ## Implementation status
 
-Task T-23 (static presentation site that works without the API) is pending at the time of writing.
+T-23 is done: `index.html` is a static presentation site that opens without the API and adapts to mobile and desktop. Evidence: open `index.html` in a browser.
